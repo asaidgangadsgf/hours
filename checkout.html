@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — 25HOURS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/checkout.css" />
+</head>
+<body class="co-body">
+  <header class="co-header">
+    <div class="co-header__inner">
+      <a href="index.html" class="co-header__logo" aria-label="25HOURS Home">
+        <img src="_image/loog.png" alt="25HOURS" width="130" height="40" />
+      </a>
+      <a href="cart.html" class="co-header__bag" aria-label="Back to cart">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M6 6h15l-1.5 9h-12z" />
+          <circle cx="9" cy="20" r="1" />
+          <circle cx="18" cy="20" r="1" />
+          <path d="M6 6L5 3H2" />
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <main class="co-main">
+    <div class="co-grid">
+      <!-- 左侧表单 -->
+      <div class="co-form">
+        <form data-co-form novalidate>
+          <section class="co-block">
+            <h2 class="co-block__title">Contact Information</h2>
+            <div class="co-field">
+              <div class="co-field__label-row">
+                <label for="co-email">Email Address*</label>
+                <a href="login.html" class="co-link">Signin</a>
+              </div>
+              <input type="email" id="co-email" placeholder="james.smith@example.com" autocomplete="email" />
+            </div>
+            <label class="co-check">
+              <input type="checkbox" checked />
+              <span>Email me with news and offers</span>
+            </label>
+          </section>
+
+          <section class="co-block">
+            <h2 class="co-block__title">Shipping Information</h2>
+            <div class="co-field">
+              <label for="co-country">Country*</label>
+              <select id="co-country" data-co-ship>
+                <option value="US" selected>United States</option>
+                <option value="CA">Canada</option>
+                <option value="GB">United Kingdom</option>
+                <option value="AU">Australia</option>
+              </select>
+            </div>
+            <div class="co-field-row co-field-row--2">
+              <div class="co-field">
+                <label for="co-fname">Full Name*</label>
+                <input type="text" id="co-fname" placeholder="James" data-co-ship autocomplete="given-name" />
+              </div>
+              <div class="co-field">
+                <label for="co-lname">Last name*</label>
+                <input type="text" id="co-lname" placeholder="Smith" data-co-ship autocomplete="family-name" />
+              </div>
+            </div>
+            <div class="co-field">
+              <label for="co-address">Address*</label>
+              <input type="text" id="co-address" placeholder="123 Main Street" data-co-ship autocomplete="street-address" />
+            </div>
+            <div class="co-field">
+              <label for="co-apt">Apartment, suite, (optional)</label>
+              <input type="text" id="co-apt" placeholder="Apt 4B" autocomplete="address-line2" />
+            </div>
+            <div class="co-field-row co-field-row--3">
+              <div class="co-field">
+                <label for="co-city">City*</label>
+                <input type="text" id="co-city" placeholder="Delmar" data-co-ship autocomplete="address-level2" />
+              </div>
+              <div class="co-field">
+                <label for="co-state">State / Province*</label>
+                <select id="co-state" data-co-ship>
+                  <option value="" selected disabled>State / Province</option>
+                  <option value="NY">New York</option>
+                  <option value="CA">California</option>
+                  <option value="TX">Texas</option>
+                  <option value="FL">Florida</option>
+                </select>
+              </div>
+              <div class="co-field">
+                <label for="co-zip">ZIP code*</label>
+                <input type="text" id="co-zip" placeholder="12054" data-co-ship autocomplete="postal-code" />
+              </div>
+            </div>
+            <label class="co-check">
+              <input type="checkbox" checked />
+              <span>Save this information for next time</span>
+            </label>
+          </section>
+
+          <section class="co-block">
+            <h2 class="co-block__title">Shipping method</h2>
+            <div class="co-ship-hint" data-co-ship-hint>
+              Enter your shipping address to view available shipping methods.
+            </div>
+            <div class="co-ship-list" data-co-ship-list hidden>
+              <label class="co-ship-opt is-on" data-co-ship-opt data-rate="5.99">
+                <input type="radio" name="shipMethod" value="standard" checked />
+                <span class="co-ship-opt__name">Standard Shipping (5–7 business days)</span>
+                <span class="co-ship-opt__price">$5.99</span>
+              </label>
+              <label class="co-ship-opt" data-co-ship-opt data-rate="12.99">
+                <input type="radio" name="shipMethod" value="express" />
+                <span class="co-ship-opt__name">Express Shipping (2–3 business days)</span>
+                <span class="co-ship-opt__price">$12.99</span>
+              </label>
+            </div>
+          </section>
+
+          <section class="co-block">
+            <h2 class="co-block__title">Payment Method</h2>
+            <div class="co-radio-box co-pay" data-co-pay data-pay-mode="paypal">
+              <label class="co-radio-row is-on" data-co-pay-row="paypal">
+                <input type="radio" name="payment" value="paypal" checked />
+                <span class="co-radio-row__text">PayPal</span>
+                <img class="co-radio-row__paypal" src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_37x23.jpg" alt="PayPal" width="62" height="18" />
+              </label>
+
+              <div class="co-pay-msg co-pay-msg--paypal" data-co-pay-msg>
+                <p class="co-pay-msg__line" data-co-pay-line="paypal">
+                  You'll be redirected to PayPal to complete your purchase
+                </p>
+              </div>
+
+              <div class="co-pay-card-panel" data-co-pay-card-panel>
+                <label class="co-radio-row" data-co-pay-row="card">
+                  <input type="radio" name="payment" value="card" />
+                  <span class="co-radio-row__text">Credit/Debit Card</span>
+                  <span class="co-card-brands" data-co-card-brands aria-hidden="true">
+                    <span class="co-card-brands__frame" data-co-card-frame tabindex="0" role="button" aria-label="View more card types">
+                      <span class="co-card-brands__viewport">
+                        <span class="co-card-brands__track" data-co-card-track>
+                          <i class="co-card co-card--visa"></i>
+                          <i class="co-card co-card--mc"></i>
+                          <i class="co-card co-card--disc"></i>
+                          <i class="co-card co-card--amex"></i>
+                        </span>
+                      </span>
+                      <span class="co-card-brands__more" data-co-card-more aria-hidden="true">+</span>
+                    </span>
+                  </span>
+                </label>
+
+                <div class="co-pay-msg co-pay-msg--card" data-co-pay-msg-card>
+                  <p class="co-pay-msg__line" data-co-pay-line="card">
+                    You'll be redirected to Credit/Debit Card to complete your purchase.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="co-block">
+            <h2 class="co-block__title">Billing address</h2>
+            <div class="co-radio-box co-bill" data-co-bill>
+              <label class="co-radio-row is-on" data-co-bill-row="same">
+                <input type="radio" name="billing" value="same" checked />
+                <span class="co-radio-row__text">Same as shipping address</span>
+              </label>
+              <label class="co-radio-row" data-co-bill-row="different">
+                <input type="radio" name="billing" value="different" />
+                <span class="co-radio-row__text">Use a different billing address</span>
+              </label>
+              <div class="co-bill-expand" data-co-bill-expand>
+                <div class="co-bill-expand__inner">
+                  <div class="co-field">
+                    <label for="co-bill-country">Country*</label>
+                    <select id="co-bill-country">
+                      <option value="US" selected>United States</option>
+                      <option value="CA">Canada</option>
+                    </select>
+                  </div>
+                  <div class="co-field-row co-field-row--2">
+                    <div class="co-field">
+                      <label for="co-bill-fname">Full Name*</label>
+                      <input type="text" id="co-bill-fname" placeholder="James" />
+                    </div>
+                    <div class="co-field">
+                      <label for="co-bill-lname">Last name*</label>
+                      <input type="text" id="co-bill-lname" placeholder="Smith" />
+                    </div>
+                  </div>
+                  <div class="co-field">
+                    <label for="co-bill-address">Address*</label>
+                    <input type="text" id="co-bill-address" placeholder="123 Main Street" />
+                  </div>
+                  <div class="co-field">
+                    <label for="co-bill-apt">Apartment, suite, (optional)</label>
+                    <input type="text" id="co-bill-apt" placeholder="Apt 4B" />
+                  </div>
+                  <div class="co-field-row co-field-row--3">
+                    <div class="co-field">
+                      <label for="co-bill-city">City*</label>
+                      <input type="text" id="co-bill-city" placeholder="Delmar" />
+                    </div>
+                    <div class="co-field">
+                      <label for="co-bill-state">State / Province*</label>
+                      <select id="co-bill-state">
+                        <option value="" selected disabled>State / Province</option>
+                        <option value="NY">New York</option>
+                        <option value="CA">California</option>
+                      </select>
+                    </div>
+                    <div class="co-field">
+                      <label for="co-bill-zip">ZIP code*</label>
+                      <input type="text" id="co-bill-zip" placeholder="12054" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <button type="submit" class="co-submit" data-co-submit>Pay now</button>
+        </form>
+      </div>
+
+      <!-- 右侧订单摘要 -->
+      <aside class="co-summary" aria-label="Order summary">
+        <div class="co-summary__inner">
+          <ul class="co-products" data-co-products></ul>
+          <p class="co-empty" data-co-empty hidden>
+            Your cart is empty. <a href="index.html">Continue shopping</a>
+          </p>
+          <div class="co-totals">
+            <div class="co-totals__row">
+              <span data-co-sub-label>Subtotal . 0 items</span>
+              <span data-co-sub>$0.00</span>
+            </div>
+            <div class="co-totals__row co-totals__row--muted">
+              <span>Shipping</span>
+              <span data-co-ship-price>Enter shipping address</span>
+            </div>
+            <div class="co-totals__grand">
+              <span>Total</span>
+              <span class="co-totals__amount">
+                <small>USD</small>
+                <strong data-co-total>$0.00</strong>
+              </span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <script src="js/product-catalog.js" defer></script>
+  <script src="js/checkout.js" defer></script>
+</body>
+</html>

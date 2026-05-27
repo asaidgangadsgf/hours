@@ -1,0 +1,729 @@
+/* 25HOURS Checkout — pixel-match layout */
+:root {
+  --co-blue: #1773b0;
+  --co-blue-dark: #125f92;
+  --co-tint: #e8f4fc;
+  --co-border: #d9d9d9;
+  --co-text: #333333;
+  --co-muted: #707070;
+  --co-hint-bg: #f0f0f0;
+  --co-aside-bg: #fafafa;
+  --co-radius: 5px;
+  --co-shell: 1080px;
+  --co-aside: 42%;
+  --co-form: 58%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.co-body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 14px;
+  color: var(--co-text);
+  background: #fff;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+/* —— Header —— */
+.co-header {
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.co-header__inner {
+  max-width: var(--co-shell);
+  margin: 0 auto;
+  padding: 20px 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.co-header__logo img {
+  display: block;
+  height: 34px;
+  width: auto;
+}
+
+.co-header__bag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--co-text);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+
+.co-header__bag:hover {
+  background: #f3f4f6;
+}
+
+/* —— Main grid —— */
+.co-main {
+  display: flex;
+  justify-content: center;
+}
+
+.co-grid {
+  width: 100%;
+  max-width: var(--co-shell);
+  min-width: 0;
+  display: grid;
+  grid-template-columns: var(--co-form) var(--co-aside);
+  align-items: start;
+}
+
+.co-form {
+  min-width: 0;
+  padding: clamp(24px, 3vw, 36px) clamp(20px, 4vw, 44px) 64px clamp(20px, 4vw, 42px);
+}
+
+.co-summary {
+  position: relative;
+  width: 100%;
+  align-self: stretch;
+  min-height: 814px;
+  background: var(--co-aside-bg);
+  border-left: 1px solid #ececec;
+  overflow: visible;
+}
+
+/* Gray background extends to viewport right edge */
+.co-summary::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  width: calc((100vw - min(100vw, var(--co-shell))) / 2);
+  background: var(--co-aside-bg);
+  pointer-events: none;
+}
+
+.co-summary__inner {
+  position: sticky;
+  top: 81px;
+  width: 100%;
+  max-width: 420px;
+  padding: 36px 38px 48px;
+  box-sizing: border-box;
+}
+
+/* —— Form blocks —— */
+.co-block {
+  margin-bottom: 32px;
+}
+
+.co-block__title {
+  margin: 0 0 16px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.co-field {
+  margin-bottom: 11px;
+}
+
+.co-field label,
+.co-field__label-row label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: var(--co-text);
+}
+
+.co-field__label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+
+.co-field__label-row label {
+  margin-bottom: 0;
+}
+
+.co-link {
+  font-size: 13px;
+  color: var(--co-blue);
+  text-decoration: underline;
+}
+
+.co-field input,
+.co-field select,
+.co-bill-expand__inner input,
+.co-bill-expand__inner select {
+  width: 100%;
+  height: 46px;
+  padding: 11px 12px;
+  font: inherit;
+  font-size: 14px;
+  color: var(--co-text);
+  background: #fff;
+  border: 1px solid var(--co-border);
+  border-radius: var(--co-radius);
+  appearance: none;
+}
+
+.co-field input::placeholder {
+  color: #9ca3af;
+}
+
+.co-field select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23666' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px;
+  cursor: pointer;
+}
+
+.co-field input:focus,
+.co-field select:focus,
+.co-bill-expand__inner input:focus,
+.co-bill-expand__inner select:focus {
+  outline: none;
+  border-color: var(--co-blue);
+  box-shadow: 0 0 0 1px var(--co-blue);
+}
+
+.co-field-row {
+  display: grid;
+  gap: 11px;
+}
+
+.co-field-row--2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.co-field-row--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.co-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.co-check input {
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+  accent-color: var(--co-blue);
+  flex-shrink: 0;
+}
+
+/* —— Shipping method —— */
+.co-ship-hint {
+  padding: 18px 16px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--co-muted);
+  background: var(--co-hint-bg);
+  border: 1px solid #e3e3e3;
+  border-radius: var(--co-radius);
+}
+
+.co-ship-list {
+  border: 1px solid var(--co-border);
+  border-radius: var(--co-radius);
+  overflow: hidden;
+}
+
+.co-ship-opt {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 16px;
+  cursor: pointer;
+  background: #fff;
+  border-bottom: 1px solid var(--co-border);
+  transition: background 0.2s;
+}
+
+.co-ship-opt:last-child {
+  border-bottom: none;
+}
+
+.co-ship-opt.is-on {
+  background: var(--co-tint);
+}
+
+.co-ship-opt input {
+  accent-color: var(--co-blue);
+  flex-shrink: 0;
+}
+
+.co-ship-opt__name {
+  flex: 1;
+  font-size: 14px;
+}
+
+.co-ship-opt__price {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* —— Radio boxes (payment / billing) —— */
+.co-radio-box {
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid var(--co-border);
+  border-radius: var(--co-radius);
+  overflow: hidden;
+}
+
+.co-radio-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 16px;
+  cursor: pointer;
+  background: #fff;
+  border-bottom: 1px solid var(--co-border);
+  transition: background 0.2s;
+}
+
+.co-radio-row:last-of-type {
+  border-bottom: none;
+}
+
+.co-radio-row.is-on {
+  background: var(--co-tint);
+}
+
+/* Payment rows — selected: light blue fill + blue outline (match reference) */
+.co-pay .co-radio-row.is-on {
+  background: var(--co-tint);
+  box-shadow: inset 0 0 0 1px var(--co-blue);
+  border-bottom-color: var(--co-blue);
+}
+
+.co-radio-row input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: var(--co-blue);
+  flex-shrink: 0;
+}
+
+.co-radio-row__text {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.co-radio-row__paypal {
+  height: 18px;
+  width: auto;
+}
+
+/* Payment: Card row + notice move up together; row covers PayPal notice, notice fills its slot */
+.co-pay {
+  --co-pay-notice-h: 48px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.co-pay [data-co-pay-row="paypal"] {
+  order: 1;
+  position: relative;
+  z-index: 3;
+}
+
+.co-pay-msg--paypal {
+  order: 2;
+  position: relative;
+  z-index: 1;
+}
+
+.co-pay-card-panel {
+  order: 3;
+  position: relative;
+  z-index: 2;
+  transition:
+    transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    margin-bottom 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.co-pay[data-pay-mode="card"] .co-pay-card-panel {
+  transform: translateY(calc(-1 * var(--co-pay-notice-h)));
+  margin-bottom: calc(-1 * var(--co-pay-notice-h));
+}
+
+.co-pay-card-panel [data-co-pay-row="card"] {
+  position: relative;
+  z-index: 2;
+}
+
+.co-pay-msg {
+  overflow: hidden;
+  background: var(--co-hint-bg);
+  flex-shrink: 0;
+}
+
+.co-pay-msg--paypal {
+  height: var(--co-pay-notice-h);
+  border-bottom: 1px solid var(--co-border);
+}
+
+.co-pay-msg__line {
+  margin: 0;
+  padding: 0 16px 0 46px;
+  font-size: 13px;
+  color: #4b5563;
+  line-height: 1.45;
+  height: var(--co-pay-notice-h);
+  display: flex;
+  align-items: center;
+}
+
+/* Card notice — follows Card row up, expands into former PayPal notice slot */
+.co-pay-msg--card {
+  max-height: 0;
+  border-top: 1px solid transparent;
+  transition:
+    max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.co-pay[data-pay-mode="card"] .co-pay-msg--card {
+  max-height: var(--co-pay-notice-h);
+  border-top-color: var(--co-border);
+}
+
+/* Card brand carousel — click frame to slide icons, not text */
+.co-card-brands {
+  flex-shrink: 0;
+}
+
+.co-card-brands__frame {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  width: 153px;
+  height: 22px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.co-card-brands__viewport {
+  width: 114px;
+  height: 22px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.co-card-brands__track {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.co-card-brands__more {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 22px;
+  flex-shrink: 0;
+  border-radius: 3px;
+  border: 1px solid var(--co-border);
+  background: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  color: #6b7280;
+  font-style: normal;
+}
+
+.co-card-brands.is-overflow .co-card-brands__more {
+  display: inline-flex;
+}
+
+.co-card {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 36px;
+  height: 22px;
+  border-radius: 3px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.co-card--visa {
+  background-color: #1a1f71;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='22'%3E%3Crect fill='%231a1f71' width='36' height='22' rx='3'/%3E%3Ctext x='5' y='15' fill='white' font-size='8' font-weight='700' font-family='Arial'%3EVISA%3C/text%3E%3C/svg%3E");
+}
+
+.co-card--mc {
+  background: linear-gradient(90deg, #eb001b 50%, #f79e1b 50%);
+}
+
+.co-card--disc {
+  background-color: #ff6000;
+}
+
+.co-card--amex {
+  background-color: #006fcf;
+}
+
+/* Billing expand — max-height for smoother open/close */
+.co-bill-expand {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.32s ease;
+  contain: layout style;
+}
+
+.co-bill-expand.is-open {
+  transition: max-height 0.32s ease;
+}
+
+.co-bill-expand__inner {
+  padding: 0 16px;
+  border-top: 1px solid transparent;
+  background: #f7f7f7;
+}
+
+.co-bill-expand.is-open .co-bill-expand__inner {
+  padding: 16px clamp(12px, 3vw, 16px) 8px;
+  border-top-color: var(--co-border);
+}
+
+.co-bill-expand__inner .co-field-row--3 {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 120px), 1fr));
+}
+
+.co-bill-expand__inner .co-field:last-child {
+  margin-bottom: 8px;
+}
+
+/* Submit */
+.co-submit {
+  width: 100%;
+  margin-top: 4px;
+  padding: 17px 20px;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--co-blue);
+  border: none;
+  border-radius: var(--co-radius);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.co-submit:hover {
+  background: var(--co-blue-dark);
+}
+
+/* —— Order summary —— */
+.co-products {
+  list-style: none;
+  margin: 0 0 28px;
+  padding: 0;
+}
+
+.co-product {
+  display: grid;
+  grid-template-columns: 72px 1fr auto;
+  gap: 14px;
+  align-items: start;
+  margin-bottom: 20px;
+}
+
+.co-product:last-child {
+  margin-bottom: 0;
+}
+
+.co-product__media {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.co-product__media img {
+  max-width: 90%;
+  max-height: 90%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
+
+.co-product__qty {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 22px;
+  text-align: center;
+  color: #fff;
+  background: #737373;
+  border-radius: 11px;
+  box-shadow: 0 0 0 2px var(--co-aside-bg);
+}
+
+.co-product__name {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.45;
+  padding-right: 8px;
+}
+
+.co-product__price {
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  padding-top: 2px;
+}
+
+.co-empty {
+  font-size: 14px;
+  color: var(--co-muted);
+  margin: 0 0 24px;
+}
+
+.co-empty a {
+  color: var(--co-blue);
+}
+
+.co-totals {
+  border-top: 1px solid #dddddd;
+  padding-top: 22px;
+}
+
+.co-totals__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.co-totals__row--muted span:last-child {
+  font-size: 13px;
+  color: var(--co-muted);
+}
+
+.co-totals__grand {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 18px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.co-totals__amount {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.co-totals__amount small {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--co-muted);
+}
+
+.co-totals__amount strong {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* —— Responsive —— */
+@media (max-width: 900px) {
+  .co-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .co-summary {
+    order: -1;
+    position: static;
+    min-height: 0;
+    border-left: none;
+    border-bottom: 1px solid #ececec;
+  }
+
+  .co-summary::after {
+    display: none;
+  }
+
+  .co-summary__inner {
+    position: static;
+    max-width: none;
+    padding: 28px 24px;
+  }
+
+  .co-form {
+    padding: 28px 24px 48px;
+  }
+
+  .co-header__inner {
+    padding: 16px 24px;
+  }
+
+  .co-field-row--3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .co-field-row--2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .co-pay-card-panel,
+  .co-pay-msg--card,
+  .co-card-brands__track,
+  .co-bill-expand {
+    transition: none !important;
+  }
+
+  .co-pay[data-pay-mode="card"] .co-pay-card-panel {
+    transform: translateY(calc(-1 * var(--co-pay-notice-h)));
+    margin-bottom: calc(-1 * var(--co-pay-notice-h));
+  }
+
+  .co-pay[data-pay-mode="card"] .co-pay-msg--card {
+    max-height: var(--co-pay-notice-h);
+  }
+}

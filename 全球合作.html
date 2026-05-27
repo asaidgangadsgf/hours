@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Cooperation — 25HOURS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="announcement" role="banner">
+    <p>Welcome to 25HOURS</p>
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+      <a href="index.html" class="logo" aria-label="25HOURS Home">
+        <img class="logo-img" src="_image/loog.png" alt="25HOURS" />
+      </a>
+
+      <nav class="main-nav" id="main-nav" data-main-nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="激活保修.html">Activate Warranty</a>
+        <a href="用户手册.html">Download User Manual</a>
+        <a href="全球合作.html" class="is-active" aria-current="page">Global Cooperation</a>
+        <a href="关于我们.html">About Us</a>
+        <a href="联系我们.html">Contact Us</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search-wrap" data-search-wrap>
+          <button type="button" class="icon-btn search-toggle" data-search-toggle aria-expanded="false" aria-controls="site-search" title="Search">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="11" cy="11" r="7" />
+              <path d="M20 20l-3-3" />
+            </svg>
+          </button>
+          <div class="search-dropdown" data-search-dropdown hidden>
+            <form class="search-panel" id="site-search" data-search-panel role="search">
+              <input type="search" name="q" placeholder="Search products…" autocomplete="off" data-search-input aria-autocomplete="list" aria-controls="search-results" />
+            </form>
+            <ul class="search-results" id="search-results" data-search-results role="listbox" aria-label="Product search results" hidden></ul>
+          </div>
+        </div>
+        <a href="login.html" class="icon-btn" title="Account / Login" aria-label="Login">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+        </a>
+        <button type="button" class="icon-btn cart-btn" data-cart-open aria-label="Open cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M6 6h15l-1.5 9h-12z" />
+            <circle cx="9" cy="20" r="1" />
+            <circle cx="18" cy="20" r="1" />
+            <path d="M6 6L5 3H2" />
+          </svg>
+          <span class="cart-badge is-zero" data-cart-badge hidden>0</span>
+        </button>
+      </div>
+    </div>
+    <div class="nav-overlay" data-nav-overlay hidden></div>
+  </header>
+
+  <main class="cooperation-page">
+    <section class="cooperation-section">
+      <div class="cooperation-grid">
+        <div class="cooperation-visual">
+          <img src="_image/地球.png" alt="Earth viewed from space"/>
+        </div>
+
+        <div class="cooperation-content">
+          <h1>Global Cooperation</h1>
+
+          <article class="cooperation-block">
+            <h2>Global Partnerships</h2>
+            <p>At 25HOURS, we believe in the power of collaboration. Join us in revolutionizing the automotive electronics landscape by becoming a partner. Together, we can innovate and stand out!</p>
+          </article>
+
+          <article class="cooperation-block">
+            <h2>For B2B Clients:</h2>
+            <p><strong>Explore Collaboration Opportunities.</strong> We are seeking reliable partners to distribute and retail our unique products. If you're interested in joining forces, please reach out to us at <a href="mailto:service@krunia.com">service@25hours.com</a></p>
+          </article>
+
+          <article class="cooperation-block">
+            <h2>For B2C Clients:</h2>
+            <p><strong>Get Free Krunia Products and Become a Product Reviewer.</strong> We invite our customers to share their experiences on platforms like Amazon, create review videos, and share them on social media like YouTube, TikTok, Instagram, Facebook, and X using the hashtag<strong>#25HOURSInnovation</strong> to connect with us!</p>
+          </article>
+
+          <article class="cooperation-block">
+            <h2>Join Us Today!</h2>
+            <p>Whether you're a business looking to collaborate or a customer eager to share your insights, we want to hear from you! Fill out our partnership application or contact us directly at <a href="mailto:service@krunia.com">service@25hours.com</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 25HOURS. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" data-cart-overlay hidden></div>
+  <aside class="cart-drawer" data-cart-drawer aria-hidden="true" hidden>
+    <div class="cart-drawer-head">
+      <h2>Your cart</h2>
+      <button type="button" class="icon-btn cart-close" data-cart-close aria-label="Close cart">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <ul class="cart-lines" data-cart-lines></ul>
+    <div class="cart-summary">
+      <p><span data-cart-count-label>0</span> items</p>
+      <p class="cart-total">Total: <strong data-cart-total>$0.00 USD</strong></p>
+    </div>
+    <a href="cart.html" class="cart-view-link">View cart</a>
+    <a href="checkout.html" class="btn btn-dark btn-block">Checkout</a>
+  </aside>
+
+  <script src="js/product-catalog.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — 25HOURS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="announcement" role="banner">
+    <p>Welcome to 25HOURS</p>
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+      <a href="index.html" class="logo" aria-label="25HOURS Home">
+        <img class="logo-img" src="_image/loog.png" alt="25HOURS" />
+      </a>
+
+      <nav class="main-nav" id="main-nav" data-main-nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="激活保修.html">Activate Warranty</a>
+        <a href="用户手册.html">Download User Manual</a>
+        <a href="全球合作.html">Global Cooperation</a>
+        <a href="关于我们.html">About Us</a>
+        <a href="联系我们.html" class="is-active" aria-current="page">Contact Us</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search-wrap" data-search-wrap>
+          <button type="button" class="icon-btn search-toggle" data-search-toggle aria-expanded="false" aria-controls="site-search" title="Search">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="11" cy="11" r="7" />
+              <path d="M20 20l-3-3" />
+            </svg>
+          </button>
+          <div class="search-dropdown" data-search-dropdown hidden>
+            <form class="search-panel" id="site-search" data-search-panel role="search">
+              <input type="search" name="q" placeholder="Search products…" autocomplete="off" data-search-input aria-autocomplete="list" aria-controls="search-results" />
+            </form>
+            <ul class="search-results" id="search-results" data-search-results role="listbox" aria-label="Product search results" hidden></ul>
+          </div>
+        </div>
+        <a href="login.html" class="icon-btn" title="Account / Login" aria-label="Login">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+        </a>
+        <button type="button" class="icon-btn cart-btn" data-cart-open aria-label="Open cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M6 6h15l-1.5 9h-12z" />
+            <circle cx="9" cy="20" r="1" />
+            <circle cx="18" cy="20" r="1" />
+            <path d="M6 6L5 3H2" />
+          </svg>
+          <span class="cart-badge is-zero" data-cart-badge hidden>0</span>
+        </button>
+      </div>
+    </div>
+    <div class="nav-overlay" data-nav-overlay hidden></div>
+  </header>
+
+  <main class="warranty-page">
+    <section class="warranty-form-section">
+      <h1 class="form-page-title">Contact Us</h1>
+      <p class="warranty-form-intro">
+        Fill out the form below to let us know the product you purchased and the specific issue you're experiencing.
+      </p>
+
+      <form class="warranty-form" id="contact-form" data-contact-form novalidate>
+        <div class="warranty-field">
+          <label for="contact-name">Name<span class="required" aria-hidden="true">*</span></label>
+          <input type="text" id="contact-name" name="name" required autocomplete="name" />
+        </div>
+
+        <div class="warranty-field">
+          <label for="contact-email">Email Address<span class="required" aria-hidden="true">*</span></label>
+          <input type="email" id="contact-email" name="email" required autocomplete="email" />
+        </div>
+
+        <div class="warranty-field">
+          <label for="contact-product">Please select the product you purchased<span class="required" aria-hidden="true">*</span></label>
+          <div class="warranty-select-wrap">
+            <select id="contact-product" name="product" required>
+              <option value="" selected disabled>Please Select</option>
+              <option value="RC06">RC06</option>
+              <option value="RC07">RC07</option>
+              <option value="RC11">RC11</option>
+              <option value="25HOURS 10.26&quot; Wireless Car Display">25HOURS 10.26" Wireless Car Display</option>
+              <option value="Krania K1 2K Wi-Fi Dash Cam">Krania K1 2K Wi-Fi Dash Cam</option>
+              <option value="USB-C Fast Car Charger 45W">USB-C Fast Car Charger 45W</option>
+              <option value="Magnetic Dashboard Mount Pro">Magnetic Dashboard Mount Pro</option>
+              <option value="Krania Mini 1080P Dual Lens">Krania Mini 1080P Dual Lens</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="warranty-field">
+          <label for="contact-country">Select Country<span class="required" aria-hidden="true">*</span></label>
+          <div class="warranty-select-wrap">
+            <select id="contact-country" name="country" required>
+              <option value="" selected disabled>Please Select</option>
+              <option value="United States">United States</option>
+              <option value="Canada">Canada</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="Germany">Deutschland</option>
+              <option value="France">France</option>
+              <option value="Australia">Australia</option>
+              <option value="Japan">日本</option>
+              <option value="South Korea">대한민국</option>
+              <option value="China">中国</option>
+              <option value="Hong Kong">香港</option>
+              <option value="Taiwan">台灣</option>
+              <option value="Singapore">Singapore</option>
+              <option value="Malaysia">Malaysia</option>
+              <option value="Thailand">ประเทศไทย</option>
+              <option value="India">भारत</option>
+              <option value="United Arab Emirates">الإمارات العربية المتحدة</option>
+              <option value="Mexico">Mexico</option>
+              <option value="Brazil">Brazil</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="warranty-field">
+          <label for="contact-order">Order Number<span class="required" aria-hidden="true">*</span></label>
+          <input type="text" id="contact-order" name="orderNumber" required autocomplete="off" />
+        </div>
+
+        <div class="warranty-field">
+          <label for="contact-model">Model Name</label>
+          <input type="text" id="contact-model" name="modelName" autocomplete="off" />
+        </div>
+
+        <div class="warranty-field">
+          <label for="contact-description">Detailed Description of the Issue<span class="required" aria-hidden="true">*</span></label>
+          <textarea id="contact-description" name="description" rows="4" required></textarea>
+        </div>
+
+        <div class="warranty-form-actions">
+          <button type="submit" class="warranty-submit">Submit</button>
+        </div>
+
+        <p class="warranty-form-message" data-contact-message hidden role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 25HOURS. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" data-cart-overlay hidden></div>
+  <aside class="cart-drawer" data-cart-drawer aria-hidden="true" hidden>
+    <div class="cart-drawer-head">
+      <h2>Your cart</h2>
+      <button type="button" class="icon-btn cart-close" data-cart-close aria-label="Close cart">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <ul class="cart-lines" data-cart-lines></ul>
+    <div class="cart-summary">
+      <p><span data-cart-count-label>0</span> items</p>
+      <p class="cart-total">Total: <strong data-cart-total>$0.00 USD</strong></p>
+    </div>
+    <a href="cart.html" class="cart-view-link">View cart</a>
+    <a href="checkout.html" class="btn btn-dark btn-block">Checkout</a>
+  </aside>
+
+  <script src="js/product-catalog.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

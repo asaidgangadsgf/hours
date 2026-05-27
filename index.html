@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>25HOURS — Intelligent driving, connected life.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="announcement" role="banner">
+    <p>Welcome to 25HOURS</p>
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="main-nav" aria-label="打开菜单">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+      <a href="index.html" class="logo" aria-label="25HOURS 首页">
+        <img class="logo-img" src="_image/loog.png" alt="25HOURS"/>
+      </a>
+
+      <nav class="main-nav" id="main-nav" data-main-nav aria-label="主导航">
+        <a href="index.html" class="is-active" aria-current="page">Home</a>
+        <a href="激活保修.html">Activate Warranty</a>
+        <a href="用户手册.html">Download User Manual</a>
+        <a href="全球合作.html">Global Cooperation</a>
+        <a href="关于我们.html">About Us</a>
+        <a href="联系我们.html">Contact Us</a>
+      </nav>
+		
+      <div class="header-actions">
+        <div class="search-wrap" data-search-wrap>
+          <button type="button" class="icon-btn search-toggle" data-search-toggle aria-expanded="false" aria-controls="site-search" title="搜索">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="11" cy="11" r="7" />
+              <path d="M20 20l-3-3" />
+            </svg>
+          </button>
+          <div class="search-dropdown" data-search-dropdown hidden>
+            <form class="search-panel" id="site-search" data-search-panel role="search">
+              <input type="search" name="q" placeholder="Search products…" autocomplete="off" data-search-input aria-autocomplete="list" aria-controls="search-results" />
+            </form>
+            <ul class="search-results" id="search-results" data-search-results role="listbox" aria-label="Product search results" hidden></ul>
+          </div>
+        </div>
+        <a href="login.html" class="icon-btn" title="Account / Login" aria-label="登录">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+        </a>
+        <button type="button" class="icon-btn cart-btn" data-cart-open aria-label="打开购物车">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M6 6h15l-1.5 9h-12z" />
+            <circle cx="9" cy="20" r="1" />
+            <circle cx="18" cy="20" r="1" />
+            <path d="M6 6L5 3H2" />
+          </svg>
+          <span class="cart-badge is-zero" data-cart-badge hidden>0</span>
+        </button>
+      </div>
+    </div>
+    <div class="nav-overlay" data-nav-overlay hidden></div>
+  </header>
+    <section class="hero">
+		<div class="hero-inner">
+        <div class="hero-content">
+            <h1>Intelligent driving,<br>connected life.</h1>
+            <p>10.26-inch wireless CarPlay and<br>Android Auto portable in-car display</p>
+            <a href="_Product Details/028.html">
+            <button class="btn-blue">LEARN MORE 
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+          </a>        </div>
+		</div>
+    </section>
+  <main>
+    <section class="warranty waterfall-section" id="warranty" data-reveal>
+      <div class="warranty-grid">
+        <div class="warranty-photo" data-reveal-child>
+          <img src="_image/图层-5.jpg" alt="Family with car" width="700" height="520" />
+        </div>
+        <div class="warranty-content" data-reveal-child>
+          <h2>Activate Your Warranty</h2>
+          <p>Fill in your information into the blank form and submit it, we will help you activate your warranty</p>
+          <a href="激活保修.html" class="btn btn-dark btn-block">Click Here to Activate Your Warranty</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured waterfall-section" id="featured" data-reveal>
+      <div class="section-head">
+        <h2>Featured products</h2>
+      </div>
+      <div class="product-grid">
+        <article class="product-card" data-product-card data-reveal-child>
+          <a href="_Product Details/2.5D.html" class="product-card-link">
+            <div class="product-thumb">
+              <img src="_image/2.5D/560px/主图1.webp" alt="" class="product-img img-a"/>
+              <img src="_image/2.5D/560px/主图2.webp" alt="" class="product-img img-b"/>
+            </div>
+            <h3 class="product-title">25hours 7" CarPlay Smart Screen</h3>
+            <p class="product-price"><del>$78.99 USD</del> <strong>$45.58 USD</strong></p>
+          </a>
+        </article>
+        <article class="product-card" data-product-card data-reveal-child>
+          <a href="_Product Details/004.html" class="product-card-link">
+            <div class="product-thumb">
+              <img src="_image/004/560px/主图1.webp" alt="" class="product-img img-a"/>
+              <img src="_image/004/560px/主图2.webp" alt="" class="product-img img-b"/>
+            </div>
+            <h3 class="product-title">25HOURS 10.26&quot; Wireless Car Display</h3>
+            <p class="product-price"><del>$189.99 USD</del> <strong>$159.99 USD</strong></p>
+          </a>
+        </article>
+        <article class="product-card" data-product-card data-reveal-child>
+          <a href="_Product Details/6.86 inches.html" class="product-card-link">
+            <div class="product-thumb">
+              <img src="_image/6.86 inches/560px/主图1.webp" alt="" class="product-img img-a"/>
+              <img src="_image/6.86 inches/560px/主图2.webp" alt="" class="product-img img-b"/>
+            </div>
+            <h3 class="product-title">USB-C Fast Car Charger 45W</h3>
+            <p class="product-price"><del>$29.99 USD</del> <strong>$22.99 USD</strong></p>
+          </a>
+        </article>
+        <article class="product-card" data-product-card data-reveal-child>
+          <a href="_Product Details/7 inch.html" class="product-card-link">
+            <div class="product-thumb">
+              <img src="_image/7 inch/560px/主图1.webp" alt="" class="product-img img-a"/>
+              <img src="_image/7 inch/560px/主图2.webp" alt="" class="product-img img-b"/>
+            </div>
+            <h3 class="product-title">HK3 Carplay Screen for Car</h3>
+            <p class="product-price"><del>$129.89 USD</del> <strong>$98.89 USD</strong></p>
+          </a>
+        </article>
+        <article class="product-card" data-product-card data-reveal-child>
+          <a href="_Product Details/9 inch.html" class="product-card-link">
+            <div class="product-thumb">
+              <img src="_image/9 inch/560px/主图1.webp" alt="" class="product-img img-a"/>
+              <img src="_image/9 inch/560px/主图2.webp" alt="" class="product-img img-b"/>
+            </div>
+            <h3 class="product-title">25 HOURS HK9 9 Inch Apple Carplay & Android Screen</h3>
+            <p class="product-price"><del>$79.99 USD</del> <strong>$64.99 USD</strong></p>
+          </a>
+        </article>
+        <article class="product-card" data-product-card data-reveal-child>
+          <a href="_Product Details/028.html" class="product-card-link">
+            <div class="product-thumb">
+              <img src="_image/028/560px/主图1.webp" alt="" class="product-img img-a"/>
+              <img src="_image/028/560px/主图2.webp" alt="" class="product-img img-b"/>
+            </div>
+            <h3 class="product-title">Braided USB-C Cable Kit (3-pack)</h3>
+            <p class="product-price"><del>$19.99 USD</del> <strong>$14.99 USD</strong></p>
+          </a>
+        </article>
+        <article class="product-card" data-product-card data-reveal-child>
+          <a href="_Product Details/044.html" class="product-card-link">
+            <div class="product-thumb">
+              <img src="_image/044/560px/主图1.webp" alt="" class="product-img img-a"/>
+              <img src="_image/044/560px/主图2.webp" alt="" class="product-img img-b"/>
+            </div>
+            <h3 class="product-title">GPS Module for Krania Series</h3>
+            <p class="product-price"><del>$34.99 USD</del> <strong>$27.99 USD</strong></p>
+          </a>
+        </article>
+        <article class="product-card" data-product-card data-reveal-child>
+          <a href="_Product Details/045.html" class="product-card-link">
+            <div class="product-thumb">
+              <img src="_image/045/560px/主图1.webp" alt="" class="product-img img-a"/>
+              <img src="_image/045/560px/主图2.webp" alt="" class="product-img img-b"/>
+            </div>
+            <h3 class="product-title">25 HOURS HK5 10.26 Inch Apple Carplay & Android Screen</h3>
+            <p class="product-price"><del>$160.99 USD</del> <strong>$70.99 USD</strong></p>
+          </a>
+        </article>
+      </div>
+      <div class="section-cta">
+        <a href="products.html" class="btn btn-dark">View all</a>
+      </div>
+    </section>
+
+    <section class="series waterfall-section" data-reveal>
+      <div class="section-head">
+        <h2>Product Series</h2>
+      </div>
+      <div class="series-grid">
+        <a href="车载屏幕.html" class="series-card" data-reveal-child>
+          <div class="series-media">
+            <img src="_image/046/560px/主图1.webp" alt="CarPlay / Android Auto screen series"/>
+          </div>
+          <span class="series-link">Carplay/Android Auto Screen →</span>
+        </a>
+        <a href="摄像头.html" class="series-card" data-reveal-child>
+          <div class="series-media">
+            <img src="_image/Camera 1/560px/主图1.webp" alt="Dash cam series"/>
+          </div>
+          <span class="series-link">Surveillance cameras →</span>
+        </a>        
+        <a href="配件.html" class="series-card" data-reveal-child>
+          <div class="series-media">
+            <img src="_image/Line 1/560px/主图1.webp" alt="Dash cam series"/>
+          </div>
+          <span class="series-link">Accessories →</span>
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer waterfall-section" data-reveal>
+    <div class="footer-inner" data-reveal-child>
+      <p>© 25HOURS. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- 购物车侧栏 -->
+  <div class="cart-overlay" data-cart-overlay hidden></div>
+  <aside class="cart-drawer" data-cart-drawer aria-hidden="true" hidden>
+    <div class="cart-drawer-head">
+      <h2>Your cart</h2>
+      <button type="button" class="icon-btn cart-close" data-cart-close aria-label="关闭购物车">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <ul class="cart-lines" data-cart-lines></ul>
+    <div class="cart-summary">
+      <p><span data-cart-count-label>0</span> items</p>
+      <p class="cart-total">Total: <strong data-cart-total>$0.00 USD</strong></p>
+    </div>
+    <a href="cart.html" class="cart-view-link">View cart</a>
+    <a href="checkout.html" class="btn btn-dark btn-block">Checkout</a>
+  </aside>
+
+  <script src="js/product-catalog.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
